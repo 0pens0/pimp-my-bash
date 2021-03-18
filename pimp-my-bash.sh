@@ -4,6 +4,19 @@ apt-get -y install jq
 #Install pv for the demo-scripts
 apt-get -y install pv
 
+#Install kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+
+#docker
+sudo apt install docker
+
+#Helm
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+
 #Install kube-ps1
 git clone https://github.com/jonmosco/kube-ps1
 chmod +x kube-ps1/kube-ps1.sh
