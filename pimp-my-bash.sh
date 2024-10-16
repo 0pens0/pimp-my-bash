@@ -42,7 +42,19 @@ alias kubectx='kubectl config get-contexts'
 alias kubeset='kubectl config use-context'
 alias k=kubectl
 alias h='history |grep'
-
+alias getcon='kubectl config get-contexts'
+alias usecon='kubectl config use-context'
+alias delcon='kubectl config delete-context'
+alias recon='kubectl config rename-context'
+alias usens='k config set-context --current --namespace='
+alias tdep='tanzu resource deploy'
+alias tsvc='tanzu service instance'
+alias tpush='tanzu resource deploy --from-buid $(tanzu build)'
+alias tctx='tanzu context'
+alias tspace='tanzu space'
+alias tproj='tanzu project'
+alias tops='tanzu ops'
+alias tbuild='tanzu build'
 
 PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{yellow}%1~%f%b%)'
 source ~/kube-ps1/kube-ps1.sh
